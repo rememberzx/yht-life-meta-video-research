@@ -1,338 +1,377 @@
 <!doctype html>
-<html lang="en">
+<html lang="zh-CN">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>类似品牌优秀投放素材研究</title>
+  <title>类似品牌优秀投放素材研究 for yht-life</title>
   <style>
+    @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=Noto+Sans+SC:wght@400;500;700&display=swap');
     :root {
-      --bg: #f7f5ef;
-      --paper: #fffdf9;
-      --ink: #1f2d2a;
-      --muted: #5f6a66;
-      --line: #d9d2c8;
-      --accent: #0d7d6f;
-      --accent2: #f09240;
-      --shadow: 0 10px 24px rgba(20, 34, 31, 0.08);
+      --bg:#f3f6fb;
+      --ink:#102134;
+      --muted:#56657a;
+      --line:#d5dfeb;
+      --brand:#0e6dff;
+      --brand-2:#0ab39c;
+      --card:#ffffff;
+      --warm:#fff5ec;
+      --shadow:0 16px 38px rgba(9,32,65,.09);
     }
-    * { box-sizing: border-box; }
-    body {
-      margin: 0;
-      color: var(--ink);
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      color:var(--ink);
       background:
-        radial-gradient(70rem 35rem at 96% -8%, rgba(13,125,111,0.13), transparent 60%),
-        radial-gradient(55rem 30rem at -8% 10%, rgba(240,146,64,0.12), transparent 60%),
+        radial-gradient(48rem 22rem at 100% -10%, rgba(14,109,255,.15), transparent 60%),
+        radial-gradient(44rem 18rem at -10% 10%, rgba(10,179,156,.14), transparent 60%),
         var(--bg);
-      font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
-      line-height: 1.5;
+      font-family:'Noto Sans SC', system-ui, sans-serif;
     }
-    .wrap { width: min(1240px, 94vw); margin: 0 auto; padding: 26px 0 46px; }
-    .hero { background: linear-gradient(135deg, #fff 0%, #f6f1e8 100%); border: 1px solid var(--line); border-radius: 22px; box-shadow: var(--shadow); padding: 20px; }
-    h1 { margin: 0; font-size: clamp(1.4rem, 2vw + 1rem, 2.1rem); }
-    .sub { margin: 8px 0 14px; color: var(--muted); }
-    .chips { display: flex; flex-wrap: wrap; gap: 8px; }
-    .chip { border-radius: 999px; padding: 6px 10px; font-size: .82rem; font-weight: 700; border: 1px solid #b7c8c5; background: #eef8f6; color: #1e5d56; }
-    .links { margin-top: 14px; display: flex; flex-wrap: wrap; gap: 10px; }
-    .btn { text-decoration: none; padding: 8px 12px; border-radius: 10px; font-size: .9rem; font-weight: 700; border: 1px solid #166a60; color: #fff; background: linear-gradient(180deg, #108678, #0b6d61); display: inline-block; }
-    .btn.alt { color: #7c4919; background: #fff8f1; border-color: #d8b896; }
-    .title { margin: 24px 0 12px; font-size: 1.12rem; font-weight: 800; }
-    .conclusion-grid { display: grid; gap: 12px; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); }
-    .conclusion { border: 1px solid var(--line); border-radius: 14px; background: #fffefb; box-shadow: var(--shadow); padding: 12px; }
-    .conclusion h3 { margin: 0 0 6px; font-size: .98rem; color: #13534b; }
-    .conclusion p { margin: 0; color: #4a5754; font-size: .9rem; }
-    .grid { display: grid; gap: 14px; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); }
-    .card { border: 1px solid var(--line); border-radius: 14px; background: var(--paper); box-shadow: var(--shadow); overflow: hidden; }
-    video { width: 100%; display: block; background: #101312; aspect-ratio: 16/9; }
-    .body { padding: 12px; }
-    .row { display: flex; justify-content: space-between; align-items: center; gap: 8px; }
-    .brand { font-weight: 800; font-size: 1.03rem; }
-    .tag { font-size: .75rem; border-radius: 999px; border: 1px solid #c4d7d4; background: #eff8f6; color: #1f5c56; padding: 3px 8px; font-weight: 700; white-space: nowrap; }
-    .meta { margin-top: 8px; font-size: .84rem; color: #54615d; display: grid; grid-template-columns: 1fr 1fr; gap: 4px 8px; }
-    .hook { margin-top: 8px; border-left: 4px solid #1f8f81; background: #f2fbf9; border-radius: 7px; padding: 7px 8px; font-size: .86rem; }
-    .analysis { margin-top: 7px; border-radius: 8px; padding: 8px 9px; font-size: .84rem; color: #2f3f3b; border: 1px solid #cfe0dd; background: #f7fcfb; }
-    .analysis.visual { border-color: #edd7be; background: #fff9f2; }
-    .insight { margin-top: 7px; border-left: 4px solid var(--accent2); background: #fff7ef; border-radius: 7px; padding: 7px 8px; font-size: .84rem; color: #5f4222; }
-    .action { margin-top: 8px; display: flex; flex-wrap: wrap; gap: 7px; }
-    .action a { text-decoration: none; font-size: .8rem; font-weight: 700; color: #273634; border: 1px solid #c2cbca; padding: 5px 9px; border-radius: 8px; background: #fbfcfb; }
-    .foot { margin-top: 18px; padding-top: 12px; border-top: 1px dashed #c9c1b5; font-size: .84rem; color: #5d6865; }
-    @media (max-width: 760px) { .grid { grid-template-columns: 1fr; } .meta { grid-template-columns: 1fr; } }
+    .wrap{max-width:1280px;margin:0 auto;padding:22px 18px 44px}
+    .hero{
+      background:linear-gradient(140deg,#ffffff 0%,#eef4ff 64%,#e9fff8 100%);
+      border:1px solid var(--line);
+      border-radius:22px;
+      box-shadow:var(--shadow);
+      padding:20px;
+      position:relative;
+      overflow:hidden;
+    }
+    .hero::after{content:'';position:absolute;right:-60px;top:-60px;width:220px;height:220px;background:conic-gradient(from 45deg,#0e6dff33,#0ab39c40,#0e6dff33);border-radius:50%;filter:blur(1px)}
+    h1{margin:0;font-family:'Space Grotesk','Noto Sans SC',sans-serif;font-size:clamp(1.4rem,2.5vw,2.2rem);letter-spacing:.3px}
+    .sub{margin:8px 0 0;color:var(--muted)}
+    .kpis{display:flex;flex-wrap:wrap;gap:10px;margin-top:14px}
+    .chip{border:1px solid #c8d7f0;background:#f5f9ff;color:#15407d;border-radius:999px;padding:6px 12px;font-size:.84rem;font-weight:700}
+    .tools{display:flex;gap:10px;flex-wrap:wrap;margin-top:14px}
+    .tools a{text-decoration:none;border-radius:10px;padding:8px 12px;font-weight:700;font-size:.9rem;border:1px solid #1d4f96;background:#0e6dff;color:#fff}
+    .tools a.alt{background:#fff;color:#17365f;border-color:#b8c9df}
+    .panel{margin-top:16px;background:#fff;border:1px solid var(--line);border-radius:16px;padding:12px 14px;box-shadow:var(--shadow)}
+    .panel h2{margin:0 0 8px;font-size:1.04rem}
+    .panel ul{margin:0;padding-left:20px;color:#34465d}
+    .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(340px,1fr));gap:14px;margin-top:16px}
+    .card{background:var(--card);border:1px solid var(--line);border-radius:16px;box-shadow:var(--shadow);overflow:hidden;opacity:0;transform:translateY(12px);animation:up .5s ease forwards;animation-delay:var(--delay)}
+    @keyframes up{to{opacity:1;transform:translateY(0)}}
+    .media-wrap{position:relative;background:#0e1520}
+    video{display:block;width:100%;aspect-ratio:16/9;background:#0b121b}
+    .stage{position:absolute;right:10px;top:10px;background:#0f2140d4;color:#cde1ff;border:1px solid #4a6ea7;border-radius:999px;padding:4px 8px;font-size:.75rem;font-weight:700}
+    .body{padding:12px}
+    .row-top{display:flex;justify-content:space-between;gap:8px;align-items:center}
+    .row-top h3{margin:0;font-size:1.05rem}
+    .pill{font-size:.73rem;border:1px solid #ccdae9;border-radius:999px;padding:3px 8px;color:#435a77;background:#f6fafe}
+    .meta{margin-top:8px;display:grid;grid-template-columns:1fr 1fr;gap:4px 8px;color:#51647b;font-size:.82rem}
+    .block{margin-top:8px;padding:8px;border:1px solid #d7e2ef;background:#f8fbff;border-radius:10px}
+    .block b{display:block;font-size:.84rem}
+    .block p{margin:5px 0 0;font-size:.84rem;line-height:1.48;color:#2f3f55}
+    .block.hook{border-left:4px solid var(--brand);background:#eef5ff}
+    .block.insight{border-left:4px solid #ff9f46;background:var(--warm)}
+    .actions{display:flex;gap:8px;flex-wrap:wrap;margin-top:10px}
+    .actions a{text-decoration:none;font-size:.8rem;font-weight:700;border-radius:9px;border:1px solid #bfd0e5;padding:6px 10px;color:#18385f;background:#f9fcff}
+    .actions a:last-child{background:#0ab39c12;border-color:#86d8ca;color:#0e6b5f}
+    @media (max-width:700px){.meta{grid-template-columns:1fr}}
   </style>
 </head>
 <body>
   <main class="wrap">
     <section class="hero">
-      <h1>类似品牌优秀投放素材研究</h1>
-      <p class="sub">10条活跃且存活&gt;14天的视频样本，含逐条脚本结构与画面结构启发</p>
-      <div class="chips"><span class="chip">samples: 10</span><span class="chip">as_of: 2026-03-12</span></div>
-      <div class="links"></div>
+      <h1>类似品牌优秀投放素材研究 for yht-life</h1>
+      <p class="sub">10 条活跃且存活超过 14 天的视频样本，含逐条脚本/画面拆解与可执行启发</p>
+      <div class="kpis">
+        <span class="chip">样本数: 10</span>
+        <span class="chip">状态: 全部 Active</span>
+        <span class="chip">时间基准: 2026-03-12</span>
+      </div>
+      <div class="tools">
+        <a class="alt" href="./analysis_report_zh.md" target="_blank" rel="noopener">查看报告</a>
+        <a class="alt" href="./sample_index.csv" target="_blank" rel="noopener">下载样本CSV</a>
+      </div>
     </section>
 
-    <h2 class="title">cross-video conclusions</h2><section class="conclusion-grid"><article class="conclusion"><h3>conclusion 1</h3><p>高存活样本普遍使用“问题先行+机制解释+低风险CTA”三段式，而不是直接硬卖产品。</p></article><article class="conclusion"><h3>conclusion 2</h3><p>开头5秒最常见三类钩子：痛点代入（失眠/焦虑）、反常识挑战（不用褪黑素）、数字化承诺（15分钟见效）。</p></article><article class="conclusion"><h3>conclusion 3</h3><p>画面上，UGC口播+字幕卡片+产品特写是主流低成本组合，适合新品牌快速迭代。</p></article><article class="conclusion"><h3>conclusion 4</h3><p>儿童睡眠相关素材更依赖情绪场景（亲子睡前冲突到安稳过渡），而成人素材更依赖成分与机制说服。</p></article><article class="conclusion"><h3>conclusion 5</h3><p>对 yht-life 建议优先测试 20-45 秒脚本，首屏明确“不想要什么 + 我们替代什么”。</p></article></section>
+    <section class="panel">
+      <h2>跨素材结论</h2>
+      <ul><li>高存活样本普遍使用“问题先行+机制解释+低风险CTA”三段式，而不是直接硬卖产品。</li><li>开头5秒最常见三类钩子：痛点代入（失眠/焦虑）、反常识挑战（不用褪黑素）、数字化承诺（15分钟见效）。</li><li>画面上，UGC口播+字幕卡片+产品特写是主流低成本组合，适合新品牌快速迭代。</li><li>儿童睡眠相关素材更依赖情绪场景（亲子睡前冲突到安稳过渡），而成人素材更依赖成分与机制说服。</li><li>对 yht-life 建议优先测试 20-45 秒脚本，首屏明确“不想要什么 + 我们替代什么”。</li></ul>
+    </section>
 
-    <h2 class="title">video breakdown</h2>
     <section class="grid">
-<article class="card">
-  <video controls preload="metadata" poster="./by_ad/1583417372782134/page_ad_1.jpg" src="./by_ad/1583417372782134/page_ad_2.mp4"></video>
-  <div class="body">
-    <div class="row">
-      <div class="brand">Rejuvia</div>
-      <span class="tag">high-similarity-new-stage</span>
-    </div>
-    <div class="meta">
-      <div>ad_id: 1583417372782134</div>
-      <div>start: 2026-01-21</div>
-      <div>days_live: 50</div>
-      <div>duration: 195.625s</div>
-      <div>cta: Learn more</div>
-      <div>status: active</div>
-    </div>
-    <div class="hook"><strong>hook:</strong> &quot;Blink once, blink twice&quot; speed claim to fall asleep fast.</div>
-    <div class="analysis"><strong>script:</strong> Hook with dramatic speed promise, then mechanism contrast (spray vs gummy digestion), then UGC quote as proof, then risk-reversal CTA.</div>
-    <div class="analysis visual"><strong>visual:</strong> Fast jump cuts, founder/creator direct-to-camera, product-in-hand closeups, subtitle-heavy pacing to carry long-form claims.</div>
-    <div class="insight"><strong>insight:</strong> 开头先给“时间量化承诺”，后面再解释原理，能明显提高完播。</div>
-    <div class="action">
-      <a href="https://www.facebook.com/ads/library?id=1583417372782134" target="_blank" rel="noopener">ad library</a>
-      <a href="./by_ad/1583417372782134/page_ad_2.mp4" target="_blank" rel="noopener">video url</a>
-    </div>
-  </div>
-</article>
-
-<article class="card">
-  <video controls preload="metadata" poster="./by_ad/2429605854142605/page_ad_1.jpg" src="./by_ad/2429605854142605/page_ad_2.mp4"></video>
-  <div class="body">
-    <div class="row">
-      <div class="brand">SleepCo</div>
-      <span class="tag">high-similarity-new-stage</span>
-    </div>
-    <div class="meta">
-      <div>ad_id: 2429605854142605</div>
-      <div>start: 2025-12-29</div>
-      <div>days_live: 73</div>
-      <div>duration: 47.359s</div>
-      <div>cta: Shop now</div>
-      <div>status: active</div>
-    </div>
-    <div class="hook"><strong>hook:</strong> Problem-first: tossing and turning at night.</div>
-    <div class="analysis"><strong>script:</strong> Pain point opener, then 3-benefit bullet stack (sleep onset/depth/cycle), then single product CTA with simple URL push.</div>
-    <div class="analysis visual"><strong>visual:</strong> Short format, text overlays as bullet cards, bright packshot center frame, minimal scene changes for clarity.</div>
-    <div class="insight"><strong>insight:</strong> 3条利益点做“卡片化并列”比长解释更适合冷流量首触达。</div>
-    <div class="action">
-      <a href="https://www.facebook.com/ads/library?id=2429605854142605" target="_blank" rel="noopener">ad library</a>
-      <a href="./by_ad/2429605854142605/page_ad_2.mp4" target="_blank" rel="noopener">video url</a>
-    </div>
-  </div>
-</article>
-
-<article class="card">
-  <video controls preload="metadata" poster="./by_ad/1374008734429154/page_ad_1.jpg" src="./by_ad/1374008734429154/page_ad_2.mp4"></video>
-  <div class="body">
-    <div class="row">
-      <div class="brand">NightHaven</div>
-      <span class="tag">high-similarity-new-stage</span>
-    </div>
-    <div class="meta">
-      <div>ad_id: 1374008734429154</div>
-      <div>start: 2025-12-16</div>
-      <div>days_live: 86</div>
-      <div>duration: 25.493s</div>
-      <div>cta: Shop now</div>
-      <div>status: active</div>
-    </div>
-    <div class="hook"><strong>hook:</strong> POV narrative for overthinkers who need 2 hours to fall asleep.</div>
-    <div class="analysis"><strong>script:</strong> Persona labeling (overthinker) -&gt; personal challenge format -&gt; no-grogginess payoff -&gt; low-friction “try tonight” CTA.</div>
-    <div class="analysis visual"><strong>visual:</strong> UGC selfie style, bedroom low-light ambiance, emoji-led subtitles, social-proof rhythm optimized for Reels placements.</div>
-    <div class="insight"><strong>insight:</strong> “POV+人群标签”能快速让目标用户自我代入，降低划走率。</div>
-    <div class="action">
-      <a href="https://www.facebook.com/ads/library?id=1374008734429154" target="_blank" rel="noopener">ad library</a>
-      <a href="./by_ad/1374008734429154/page_ad_2.mp4" target="_blank" rel="noopener">video url</a>
-    </div>
-  </div>
-</article>
-
-<article class="card">
-  <video controls preload="metadata" poster="./by_ad/1855990848337636/page_ad_1.jpg" src="./by_ad/1855990848337636/page_ad_2.mp4"></video>
-  <div class="body">
-    <div class="row">
-      <div class="brand">Nectar Calm</div>
-      <span class="tag">mid-similarity-new-stage</span>
-    </div>
-    <div class="meta">
-      <div>ad_id: 1855990848337636</div>
-      <div>start: 2025-10-20</div>
-      <div>days_live: 143</div>
-      <div>duration: 161.407s</div>
-      <div>cta: Shop now</div>
-      <div>status: active</div>
-    </div>
-    <div class="hook"><strong>hook:</strong> Large social proof: 100,000 users + cortisol framing.</div>
-    <div class="analysis"><strong>script:</strong> Authority lead-in (usage volume) -&gt; ingredient-by-benefit ladder -&gt; lifestyle transformation claim -&gt; immediate action CTA.</div>
-    <div class="analysis visual"><strong>visual:</strong> Ingredient callout graphics, product prep shots, calm-night lifestyle b-roll, slower pace to support trust-building.</div>
-    <div class="insight"><strong>insight:</strong> “成分-功效”一一映射能同时覆盖理性与感性决策。</div>
-    <div class="action">
-      <a href="https://www.facebook.com/ads/library?id=1855990848337636" target="_blank" rel="noopener">ad library</a>
-      <a href="./by_ad/1855990848337636/page_ad_2.mp4" target="_blank" rel="noopener">video url</a>
-    </div>
-  </div>
-</article>
-
-<article class="card">
-  <video controls preload="metadata" poster="./by_ad/1654348382403160/page_ad_1.jpg" src="./by_ad/1654348382403160/page_ad_2.mp4"></video>
-  <div class="body">
-    <div class="row">
-      <div class="brand">SnoozeBrew</div>
-      <span class="tag">high-similarity-new-stage</span>
-    </div>
-    <div class="meta">
-      <div>ad_id: 1654348382403160</div>
-      <div>start: 2026-01-16</div>
-      <div>days_live: 55</div>
-      <div>duration: 51.734s</div>
-      <div>cta: Shop now</div>
-      <div>status: active</div>
-    </div>
-    <div class="hook"><strong>hook:</strong> No pills, no hormones, no grogginess triad.</div>
-    <div class="analysis"><strong>script:</strong> Rapid disqualification of disliked options -&gt; simple nightly ritual framing -&gt; emotional bedtime ease -&gt; conversion CTA.</div>
-    <div class="analysis visual"><strong>visual:</strong> Kitchen/night routine scenes, cup-prep action shots, high-contrast text emphasis on “melatonin-free”.</div>
-    <div class="insight"><strong>insight:</strong> 先否定用户厌恶项（药片/激素/宿醉感）再给替代方案，转化更顺。</div>
-    <div class="action">
-      <a href="https://www.facebook.com/ads/library?id=1654348382403160" target="_blank" rel="noopener">ad library</a>
-      <a href="./by_ad/1654348382403160/page_ad_2.mp4" target="_blank" rel="noopener">video url</a>
-    </div>
-  </div>
-</article>
-
-<article class="card">
-  <video controls preload="metadata" poster="./by_ad/2103865427070531/page_ad_1.jpg" src="./by_ad/2103865427070531/page_ad_2.mp4"></video>
-  <div class="body">
-    <div class="row">
-      <div class="brand">Lunavelle</div>
-      <span class="tag">high-similarity-new-stage</span>
-    </div>
-    <div class="meta">
-      <div>ad_id: 2103865427070531</div>
-      <div>start: 2026-02-20</div>
-      <div>days_live: 20</div>
-      <div>duration: 290.687s</div>
-      <div>cta: Learn more</div>
-      <div>status: active</div>
-    </div>
-    <div class="hook"><strong>hook:</strong> “Still relying on melatonin?” contrarian opener.</div>
-    <div class="analysis"><strong>script:</strong> Category challenge -&gt; new mechanism (patch delivery) -&gt; convenience promise (no pills) -&gt; refreshed-morning payoff -&gt; CTA.</div>
-    <div class="analysis visual"><strong>visual:</strong> Patch application closeups, before/after mood contrast, premium typography overlays, longer-form explainer cadence.</div>
-    <div class="insight"><strong>insight:</strong> “反常识开头+新机制”适合新品牌打心智差异。</div>
-    <div class="action">
-      <a href="https://www.facebook.com/ads/library?id=2103865427070531" target="_blank" rel="noopener">ad library</a>
-      <a href="./by_ad/2103865427070531/page_ad_2.mp4" target="_blank" rel="noopener">video url</a>
-    </div>
-  </div>
-</article>
-
-<article class="card">
-  <video controls preload="metadata" poster="./by_ad/2716533785345987/page_ad_1.jpg" src="./by_ad/2716533785345987/page_ad_2.mp4"></video>
-  <div class="body">
-    <div class="row">
-      <div class="brand">NATPAT</div>
-      <span class="tag">mid-similarity-new-stage</span>
-    </div>
-    <div class="meta">
-      <div>ad_id: 2716533785345987</div>
-      <div>start: 2025-12-20</div>
-      <div>days_live: 82</div>
-      <div>duration: 49.599s</div>
-      <div>cta: Shop now</div>
-      <div>status: active</div>
-    </div>
-    <div class="hook"><strong>hook:</strong> &quot;Another natural sleep product?&quot; objection-first opening.</div>
-    <div class="analysis"><strong>script:</strong> Direct objection handling -&gt; unique material proof (AromaWeave) -&gt; safety claim for babies -&gt; trial CTA.</div>
-    <div class="analysis visual"><strong>visual:</strong> Parent-child bedtime scenes, sticker demo macro shots, trust badges and clean-ingredient visual anchors.</div>
-    <div class="insight"><strong>insight:</strong> 先替用户提出质疑并立刻回答，比单向夸产品更可信。</div>
-    <div class="action">
-      <a href="https://www.facebook.com/ads/library?id=2716533785345987" target="_blank" rel="noopener">ad library</a>
-      <a href="./by_ad/2716533785345987/page_ad_2.mp4" target="_blank" rel="noopener">video url</a>
-    </div>
-  </div>
-</article>
-
-<article class="card">
-  <video controls preload="metadata" poster="./by_ad/1916885525566674/page_ad_1.jpg" src="./by_ad/1916885525566674/page_ad_2.mp4"></video>
-  <div class="body">
-    <div class="row">
-      <div class="brand">Elional</div>
-      <span class="tag">high-similarity-new-stage</span>
-    </div>
-    <div class="meta">
-      <div>ad_id: 1916885525566674</div>
-      <div>start: 2025-12-02</div>
-      <div>days_live: 100</div>
-      <div>duration: 142.846s</div>
-      <div>cta: Shop now</div>
-      <div>status: active</div>
-    </div>
-    <div class="hook"><strong>hook:</strong> “Reset button” metaphor for stressed users.</div>
-    <div class="analysis"><strong>script:</strong> State emotional pain -&gt; feature-benefit checklist -&gt; speed claim (15 minutes) -&gt; offer stack + guarantee CTA.</div>
-    <div class="analysis visual"><strong>visual:</strong> Checklist overlays, bright product powder visuals, testimonial-style phrasing, offer badge repeats for urgency.</div>
-    <div class="insight"><strong>insight:</strong> “速度承诺+优惠锚点”组合对中低客单功能品非常有效。</div>
-    <div class="action">
-      <a href="https://www.facebook.com/ads/library?id=1916885525566674" target="_blank" rel="noopener">ad library</a>
-      <a href="./by_ad/1916885525566674/page_ad_2.mp4" target="_blank" rel="noopener">video url</a>
-    </div>
-  </div>
-</article>
-
-<article class="card">
-  <video controls preload="metadata" poster="./by_ad/1211476784280828/page_ad_1.jpg" src="./by_ad/1211476784280828/page_ad_2.mp4"></video>
-  <div class="body">
-    <div class="row">
-      <div class="brand">NuStrips</div>
-      <span class="tag">mid-similarity-new-stage</span>
-    </div>
-    <div class="meta">
-      <div>ad_id: 1211476784280828</div>
-      <div>start: 2026-01-03</div>
-      <div>days_live: 68</div>
-      <div>duration: 30.23s</div>
-      <div>cta: Learn more</div>
-      <div>status: active</div>
-    </div>
-    <div class="hook"><strong>hook:</strong> Testimonial quote with occupational credibility (registered nurse).</div>
-    <div class="analysis"><strong>script:</strong> Quote-led trust opening -&gt; third-party mention (NBC/CBS/USA Today) -&gt; manufacturing trust cue -&gt; click CTA.</div>
-    <div class="analysis visual"><strong>visual:</strong> Medical-clean color palette, quick trust badge inserts, product strip application snippets, concise pacing.</div>
-    <div class="insight"><strong>insight:</strong> 职业身份背书（护士/医生）能明显抬高首屏信任。</div>
-    <div class="action">
-      <a href="https://www.facebook.com/ads/library?id=1211476784280828" target="_blank" rel="noopener">ad library</a>
-      <a href="./by_ad/1211476784280828/page_ad_2.mp4" target="_blank" rel="noopener">video url</a>
-    </div>
-  </div>
-</article>
-
-<article class="card">
-  <video controls preload="metadata" poster="./by_ad/1171119405001661/page_ad_1.jpg" src="./by_ad/1171119405001661/page_ad_2.mp4"></video>
-  <div class="body">
-    <div class="row">
-      <div class="brand">EllaOla</div>
-      <span class="tag">high-similarity-new-stage</span>
-    </div>
-    <div class="meta">
-      <div>ad_id: 1171119405001661</div>
-      <div>start: 2025-12-12</div>
-      <div>days_live: 90</div>
-      <div>duration: 42.111s</div>
-      <div>cta: Shop now</div>
-      <div>status: active</div>
-    </div>
-    <div class="hook"><strong>hook:</strong> Emotional parent pain: bedtime shouldn’t feel like a fight.</div>
-    <div class="analysis"><strong>script:</strong> Parent empathy opening -&gt; reject harsh solutions -&gt; easy usage form (mix into food/drink) -&gt; cuddle outcome -&gt; CTA.</div>
-    <div class="analysis visual"><strong>visual:</strong> Parent-kid intimate moments, soft warm tones, pack sachet demos, emotional subtitle wording for resonance.</div>
-    <div class="insight"><strong>insight:</strong> 母婴品类先讲情绪场景再讲成分，点击和评论互动通常更高。</div>
-    <div class="action">
-      <a href="https://www.facebook.com/ads/library?id=1171119405001661" target="_blank" rel="noopener">ad library</a>
-      <a href="./by_ad/1171119405001661/page_ad_2.mp4" target="_blank" rel="noopener">video url</a>
-    </div>
-  </div>
-</article>
-</section>
-
-    <div class="foot">Generated with meta-ad-library-video-research skill.</div>
+    <article class="card" style="--delay:0.03s">
+      <div class="media-wrap">
+        <video controls preload="metadata" poster="./by_ad/1583417372782134/page_ad_1.jpg" src="./by_ad/1583417372782134/page_ad_2.mp4"></video>
+        <span class="stage">high-similarity-new-stage</span>
+      </div>
+      <div class="body">
+        <div class="row-top">
+          <h3>Rejuvia</h3>
+          <span class="pill">#1583417372782134</span>
+        </div>
+        <div class="meta">
+          <span>起投: 2026-01-21</span>
+          <span>存活: 50 天</span>
+          <span>时长: 195.625s</span>
+          <span>CTA: Learn more</span>
+        </div>
+        <div class="block hook"><b>Hook</b><p>&quot;Blink once, blink twice&quot; speed claim to fall asleep fast.</p></div>
+        <div class="block"><b>脚本拆解</b><p>Hook with dramatic speed promise, then mechanism contrast (spray vs gummy digestion), then UGC quote as proof, then risk-reversal CTA.</p></div>
+        <div class="block"><b>画面拆解</b><p>Fast jump cuts, founder/creator direct-to-camera, product-in-hand closeups, subtitle-heavy pacing to carry long-form claims.</p></div>
+        <div class="block insight"><b>启发点</b><p>开头先给“时间量化承诺”，后面再解释原理，能明显提高完播。</p></div>
+        <div class="actions">
+          <a href="https://www.facebook.com/ads/library?id=1583417372782134" target="_blank" rel="noopener">Ad Library</a>
+          <a href="./by_ad/1583417372782134/page_ad_2.mp4" target="_blank" rel="noopener">视频直链</a>
+          <a href="https://www.rejuvia.co/pages/rejuvia-introduction-listicle" target="_blank" rel="noopener">落地页</a>
+        </div>
+      </div>
+    </article>
+    
+    <article class="card" style="--delay:0.06s">
+      <div class="media-wrap">
+        <video controls preload="metadata" poster="./by_ad/2429605854142605/page_ad_1.jpg" src="./by_ad/2429605854142605/page_ad_2.mp4"></video>
+        <span class="stage">high-similarity-new-stage</span>
+      </div>
+      <div class="body">
+        <div class="row-top">
+          <h3>SleepCo</h3>
+          <span class="pill">#2429605854142605</span>
+        </div>
+        <div class="meta">
+          <span>起投: 2025-12-29</span>
+          <span>存活: 73 天</span>
+          <span>时长: 47.359s</span>
+          <span>CTA: Shop now</span>
+        </div>
+        <div class="block hook"><b>Hook</b><p>Problem-first: tossing and turning at night.</p></div>
+        <div class="block"><b>脚本拆解</b><p>Pain point opener, then 3-benefit bullet stack (sleep onset/depth/cycle), then single product CTA with simple URL push.</p></div>
+        <div class="block"><b>画面拆解</b><p>Short format, text overlays as bullet cards, bright packshot center frame, minimal scene changes for clarity.</p></div>
+        <div class="block insight"><b>启发点</b><p>3条利益点做“卡片化并列”比长解释更适合冷流量首触达。</p></div>
+        <div class="actions">
+          <a href="https://www.facebook.com/ads/library?id=2429605854142605" target="_blank" rel="noopener">Ad Library</a>
+          <a href="./by_ad/2429605854142605/page_ad_2.mp4" target="_blank" rel="noopener">视频直链</a>
+          <a href="https://www.officialsleepco.com/products/sleepco-sleep-gummies" target="_blank" rel="noopener">落地页</a>
+        </div>
+      </div>
+    </article>
+    
+    <article class="card" style="--delay:0.09s">
+      <div class="media-wrap">
+        <video controls preload="metadata" poster="./by_ad/1374008734429154/page_ad_1.jpg" src="./by_ad/1374008734429154/page_ad_2.mp4"></video>
+        <span class="stage">high-similarity-new-stage</span>
+      </div>
+      <div class="body">
+        <div class="row-top">
+          <h3>NightHaven</h3>
+          <span class="pill">#1374008734429154</span>
+        </div>
+        <div class="meta">
+          <span>起投: 2025-12-16</span>
+          <span>存活: 86 天</span>
+          <span>时长: 25.493s</span>
+          <span>CTA: Shop now</span>
+        </div>
+        <div class="block hook"><b>Hook</b><p>POV narrative for overthinkers who need 2 hours to fall asleep.</p></div>
+        <div class="block"><b>脚本拆解</b><p>Persona labeling (overthinker) -&gt; personal challenge format -&gt; no-grogginess payoff -&gt; low-friction “try tonight” CTA.</p></div>
+        <div class="block"><b>画面拆解</b><p>UGC selfie style, bedroom low-light ambiance, emoji-led subtitles, social-proof rhythm optimized for Reels placements.</p></div>
+        <div class="block insight"><b>启发点</b><p>“POV+人群标签”能快速让目标用户自我代入，降低划走率。</p></div>
+        <div class="actions">
+          <a href="https://www.facebook.com/ads/library?id=1374008734429154" target="_blank" rel="noopener">Ad Library</a>
+          <a href="./by_ad/1374008734429154/page_ad_2.mp4" target="_blank" rel="noopener">视频直链</a>
+          <a href="https://trynighthaven.com/products/naturalsleepgummies" target="_blank" rel="noopener">落地页</a>
+        </div>
+      </div>
+    </article>
+    
+    <article class="card" style="--delay:0.12s">
+      <div class="media-wrap">
+        <video controls preload="metadata" poster="./by_ad/1855990848337636/page_ad_1.jpg" src="./by_ad/1855990848337636/page_ad_2.mp4"></video>
+        <span class="stage">mid-similarity-new-stage</span>
+      </div>
+      <div class="body">
+        <div class="row-top">
+          <h3>Nectar Calm</h3>
+          <span class="pill">#1855990848337636</span>
+        </div>
+        <div class="meta">
+          <span>起投: 2025-10-20</span>
+          <span>存活: 143 天</span>
+          <span>时长: 161.407s</span>
+          <span>CTA: Shop now</span>
+        </div>
+        <div class="block hook"><b>Hook</b><p>Large social proof: 100,000 users + cortisol framing.</p></div>
+        <div class="block"><b>脚本拆解</b><p>Authority lead-in (usage volume) -&gt; ingredient-by-benefit ladder -&gt; lifestyle transformation claim -&gt; immediate action CTA.</p></div>
+        <div class="block"><b>画面拆解</b><p>Ingredient callout graphics, product prep shots, calm-night lifestyle b-roll, slower pace to support trust-building.</p></div>
+        <div class="block insight"><b>启发点</b><p>“成分-功效”一一映射能同时覆盖理性与感性决策。</p></div>
+        <div class="actions">
+          <a href="https://www.facebook.com/ads/library?id=1855990848337636" target="_blank" rel="noopener">Ad Library</a>
+          <a href="./by_ad/1855990848337636/page_ad_2.mp4" target="_blank" rel="noopener">视频直链</a>
+          <a href="https://drinknectar.co/products/essential-daily-calm-gift-v2" target="_blank" rel="noopener">落地页</a>
+        </div>
+      </div>
+    </article>
+    
+    <article class="card" style="--delay:0.15s">
+      <div class="media-wrap">
+        <video controls preload="metadata" poster="./by_ad/1654348382403160/page_ad_1.jpg" src="./by_ad/1654348382403160/page_ad_2.mp4"></video>
+        <span class="stage">high-similarity-new-stage</span>
+      </div>
+      <div class="body">
+        <div class="row-top">
+          <h3>SnoozeBrew</h3>
+          <span class="pill">#1654348382403160</span>
+        </div>
+        <div class="meta">
+          <span>起投: 2026-01-16</span>
+          <span>存活: 55 天</span>
+          <span>时长: 51.734s</span>
+          <span>CTA: Shop now</span>
+        </div>
+        <div class="block hook"><b>Hook</b><p>No pills, no hormones, no grogginess triad.</p></div>
+        <div class="block"><b>脚本拆解</b><p>Rapid disqualification of disliked options -&gt; simple nightly ritual framing -&gt; emotional bedtime ease -&gt; conversion CTA.</p></div>
+        <div class="block"><b>画面拆解</b><p>Kitchen/night routine scenes, cup-prep action shots, high-contrast text emphasis on “melatonin-free”.</p></div>
+        <div class="block insight"><b>启发点</b><p>先否定用户厌恶项（药片/激素/宿醉感）再给替代方案，转化更顺。</p></div>
+        <div class="actions">
+          <a href="https://www.facebook.com/ads/library?id=1654348382403160" target="_blank" rel="noopener">Ad Library</a>
+          <a href="./by_ad/1654348382403160/page_ad_2.mp4" target="_blank" rel="noopener">视频直链</a>
+          <a href="https://trysnoozebrew.com/products/snoozebrew-magnesium-sleeping-aid" target="_blank" rel="noopener">落地页</a>
+        </div>
+      </div>
+    </article>
+    
+    <article class="card" style="--delay:0.18s">
+      <div class="media-wrap">
+        <video controls preload="metadata" poster="./by_ad/2103865427070531/page_ad_1.jpg" src="./by_ad/2103865427070531/page_ad_2.mp4"></video>
+        <span class="stage">high-similarity-new-stage</span>
+      </div>
+      <div class="body">
+        <div class="row-top">
+          <h3>Lunavelle</h3>
+          <span class="pill">#2103865427070531</span>
+        </div>
+        <div class="meta">
+          <span>起投: 2026-02-20</span>
+          <span>存活: 20 天</span>
+          <span>时长: 290.687s</span>
+          <span>CTA: Learn more</span>
+        </div>
+        <div class="block hook"><b>Hook</b><p>“Still relying on melatonin?” contrarian opener.</p></div>
+        <div class="block"><b>脚本拆解</b><p>Category challenge -&gt; new mechanism (patch delivery) -&gt; convenience promise (no pills) -&gt; refreshed-morning payoff -&gt; CTA.</p></div>
+        <div class="block"><b>画面拆解</b><p>Patch application closeups, before/after mood contrast, premium typography overlays, longer-form explainer cadence.</p></div>
+        <div class="block insight"><b>启发点</b><p>“反常识开头+新机制”适合新品牌打心智差异。</p></div>
+        <div class="actions">
+          <a href="https://www.facebook.com/ads/library?id=2103865427070531" target="_blank" rel="noopener">Ad Library</a>
+          <a href="./by_ad/2103865427070531/page_ad_2.mp4" target="_blank" rel="noopener">视频直链</a>
+          <a href="https://trylunavelle.com/products/product-1" target="_blank" rel="noopener">落地页</a>
+        </div>
+      </div>
+    </article>
+    
+    <article class="card" style="--delay:0.21s">
+      <div class="media-wrap">
+        <video controls preload="metadata" poster="./by_ad/2716533785345987/page_ad_1.jpg" src="./by_ad/2716533785345987/page_ad_2.mp4"></video>
+        <span class="stage">mid-similarity-new-stage</span>
+      </div>
+      <div class="body">
+        <div class="row-top">
+          <h3>NATPAT</h3>
+          <span class="pill">#2716533785345987</span>
+        </div>
+        <div class="meta">
+          <span>起投: 2025-12-20</span>
+          <span>存活: 82 天</span>
+          <span>时长: 49.599s</span>
+          <span>CTA: Shop now</span>
+        </div>
+        <div class="block hook"><b>Hook</b><p>&quot;Another natural sleep product?&quot; objection-first opening.</p></div>
+        <div class="block"><b>脚本拆解</b><p>Direct objection handling -&gt; unique material proof (AromaWeave) -&gt; safety claim for babies -&gt; trial CTA.</p></div>
+        <div class="block"><b>画面拆解</b><p>Parent-child bedtime scenes, sticker demo macro shots, trust badges and clean-ingredient visual anchors.</p></div>
+        <div class="block insight"><b>启发点</b><p>先替用户提出质疑并立刻回答，比单向夸产品更可信。</p></div>
+        <div class="actions">
+          <a href="https://www.facebook.com/ads/library?id=2716533785345987" target="_blank" rel="noopener">Ad Library</a>
+          <a href="./by_ad/2716533785345987/page_ad_2.mp4" target="_blank" rel="noopener">视频直链</a>
+          <a href="https://www.natpat.com/pages/sleepypatch" target="_blank" rel="noopener">落地页</a>
+        </div>
+      </div>
+    </article>
+    
+    <article class="card" style="--delay:0.24s">
+      <div class="media-wrap">
+        <video controls preload="metadata" poster="./by_ad/1916885525566674/page_ad_1.jpg" src="./by_ad/1916885525566674/page_ad_2.mp4"></video>
+        <span class="stage">high-similarity-new-stage</span>
+      </div>
+      <div class="body">
+        <div class="row-top">
+          <h3>Elional</h3>
+          <span class="pill">#1916885525566674</span>
+        </div>
+        <div class="meta">
+          <span>起投: 2025-12-02</span>
+          <span>存活: 100 天</span>
+          <span>时长: 142.846s</span>
+          <span>CTA: Shop now</span>
+        </div>
+        <div class="block hook"><b>Hook</b><p>“Reset button” metaphor for stressed users.</p></div>
+        <div class="block"><b>脚本拆解</b><p>State emotional pain -&gt; feature-benefit checklist -&gt; speed claim (15 minutes) -&gt; offer stack + guarantee CTA.</p></div>
+        <div class="block"><b>画面拆解</b><p>Checklist overlays, bright product powder visuals, testimonial-style phrasing, offer badge repeats for urgency.</p></div>
+        <div class="block insight"><b>启发点</b><p>“速度承诺+优惠锚点”组合对中低客单功能品非常有效。</p></div>
+        <div class="actions">
+          <a href="https://www.facebook.com/ads/library?id=1916885525566674" target="_blank" rel="noopener">Ad Library</a>
+          <a href="./by_ad/1916885525566674/page_ad_2.mp4" target="_blank" rel="noopener">视频直链</a>
+          <a href="https://elional.com/products/calming-drink-mix" target="_blank" rel="noopener">落地页</a>
+        </div>
+      </div>
+    </article>
+    
+    <article class="card" style="--delay:0.27s">
+      <div class="media-wrap">
+        <video controls preload="metadata" poster="./by_ad/1211476784280828/page_ad_1.jpg" src="./by_ad/1211476784280828/page_ad_2.mp4"></video>
+        <span class="stage">mid-similarity-new-stage</span>
+      </div>
+      <div class="body">
+        <div class="row-top">
+          <h3>NuStrips</h3>
+          <span class="pill">#1211476784280828</span>
+        </div>
+        <div class="meta">
+          <span>起投: 2026-01-03</span>
+          <span>存活: 68 天</span>
+          <span>时长: 30.23s</span>
+          <span>CTA: Learn more</span>
+        </div>
+        <div class="block hook"><b>Hook</b><p>Testimonial quote with occupational credibility (registered nurse).</p></div>
+        <div class="block"><b>脚本拆解</b><p>Quote-led trust opening -&gt; third-party mention (NBC/CBS/USA Today) -&gt; manufacturing trust cue -&gt; click CTA.</p></div>
+        <div class="block"><b>画面拆解</b><p>Medical-clean color palette, quick trust badge inserts, product strip application snippets, concise pacing.</p></div>
+        <div class="block insight"><b>启发点</b><p>职业身份背书（护士/医生）能明显抬高首屏信任。</p></div>
+        <div class="actions">
+          <a href="https://www.facebook.com/ads/library?id=1211476784280828" target="_blank" rel="noopener">Ad Library</a>
+          <a href="./by_ad/1211476784280828/page_ad_2.mp4" target="_blank" rel="noopener">视频直链</a>
+          <a href="https://go.nustrips.com/sleep-in-a-strip" target="_blank" rel="noopener">落地页</a>
+        </div>
+      </div>
+    </article>
+    
+    <article class="card" style="--delay:0.30s">
+      <div class="media-wrap">
+        <video controls preload="metadata" poster="./by_ad/1171119405001661/page_ad_1.jpg" src="./by_ad/1171119405001661/page_ad_2.mp4"></video>
+        <span class="stage">high-similarity-new-stage</span>
+      </div>
+      <div class="body">
+        <div class="row-top">
+          <h3>EllaOla</h3>
+          <span class="pill">#1171119405001661</span>
+        </div>
+        <div class="meta">
+          <span>起投: 2025-12-12</span>
+          <span>存活: 90 天</span>
+          <span>时长: 42.111s</span>
+          <span>CTA: Shop now</span>
+        </div>
+        <div class="block hook"><b>Hook</b><p>Emotional parent pain: bedtime shouldn’t feel like a fight.</p></div>
+        <div class="block"><b>脚本拆解</b><p>Parent empathy opening -&gt; reject harsh solutions -&gt; easy usage form (mix into food/drink) -&gt; cuddle outcome -&gt; CTA.</p></div>
+        <div class="block"><b>画面拆解</b><p>Parent-kid intimate moments, soft warm tones, pack sachet demos, emotional subtitle wording for resonance.</p></div>
+        <div class="block insight"><b>启发点</b><p>母婴品类先讲情绪场景再讲成分，点击和评论互动通常更高。</p></div>
+        <div class="actions">
+          <a href="https://www.facebook.com/ads/library?id=1171119405001661" target="_blank" rel="noopener">Ad Library</a>
+          <a href="./by_ad/1171119405001661/page_ad_2.mp4" target="_blank" rel="noopener">视频直链</a>
+          <a href="https://go.ellaola.com/paid-collections" target="_blank" rel="noopener">落地页</a>
+        </div>
+      </div>
+    </article>
+    </section>
   </main>
 </body>
 </html>
